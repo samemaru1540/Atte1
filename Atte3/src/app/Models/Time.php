@@ -19,5 +19,5 @@ class Time extends Model
         return $this->hasMany(Rest::class);
     }
 
-    protected $fillable = ['user_id', 'date', 'attend', 'leave'];
+    protected $fillable = ['id', 'user_id', 'date', 'attend', 'leave'];
 }

@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class TimeController extends Controller
 {
     public function create(Request $request){
-        $form = $request->all();
-        Time::create($form);
+        $date = $request->all();
+        Time::create($date);
         return redirect('/');
     }
 }
