@@ -17,7 +17,7 @@ class CreateRestsTable extends Migration
             $table->id();
             $table->foreignId('time_id');
             $table->time('break');
-            $table->time('break_end');
+            $table->time('break_end')->nullable();
             $table->timestamps();
         });
     }

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\TimeController;
+use App\Http\Controllers\RestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +19,8 @@ use App\Http\Controllers\AuthController;
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [AuthController::class, 'index']);
+    Route::post('/', [TimeController::class, 'create']);
+    Route::post('/', [RestController::class, 'create']);
+    Route::get('/', [UserController::class, 'index']);
+    Route::get('/date', [UserController::class,'index']);
 });
