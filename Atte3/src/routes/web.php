@@ -20,5 +20,7 @@ use App\Http\Controllers\RestController;
 Route::middleware('auth')->group(function () {
     Route::get('/', [AuthController::class, 'index']);
     Route::post('/', [TimeController::class, 'create']);
+    Route::get('/', [UserController::class, 'index']);
     Route::get('/', [TimeController::class, 'index']);
+    Route::get('/', [RestController::class, 'index']);
 });
