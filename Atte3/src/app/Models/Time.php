@@ -9,15 +9,5 @@ class Time extends Model
 {
     use HasFactory;
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    public function rests()
-    {
-        return $this->hasMany(Rest::class);
-    }
-
-    protected $fillable = ['id', 'user_id', 'date', 'attend', 'leave'];
+    protected $fillable = ['user_id', 'date', 'attend', 'leave', 'created_at', 'updated_at'];
 }

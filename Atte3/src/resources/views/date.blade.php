@@ -15,13 +15,10 @@
       <th>休憩時間</th>
       <th>勤務時間</th>
     </tr>
-    @foreach ($date as $item)
+    @foreach ($times as $times)
     <tr>
-      <td>{{ $item['name'] }}</td>
-      <td>{{ $item['attend'] }}</td>
-      <td>{{ $item['leave'] }}</td>
-      <td>{{ $item['workDuration'] }}</td>
-      <td>{{ $item['totalBreak'] }}</td>
+    <td>{{$time->attend}}</td>
+    <td>{{$time->leave}}</td>
     </tr>
     @endforeach
   </table>

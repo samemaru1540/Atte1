@@ -14,5 +14,5 @@ class rest extends Model
         return $this->belongsTo(Time::class);
     }
 
-    protected $fillable = ['id', 'time_id', 'break', 'break_end'];
+protected $fillable = ['time_id', 'break', 'break_end', 'created_at', 'updated_at'];
 }

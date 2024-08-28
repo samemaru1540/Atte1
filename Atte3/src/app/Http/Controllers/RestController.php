@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 class RestController extends Controller
 {
     public function create(Request $request){
-        $date = $request->all();
-        Rest::create($date);
+        $form = $request->all();
+        Rest::create($form);
         return redirect('/');
+    }
+    public function index()
+    {
+        $rests = Rest::all();
+        return view('index', ['rests' => $rests]);
     }
 }
