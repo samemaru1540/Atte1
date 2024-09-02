@@ -9,5 +9,18 @@ class Time extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'date', 'attend', 'leave', 'created_at', 'updated_at'];
+    protected $fillable = [
+        'user_id',
+        'date',
+        'attend',
+        'leave',
+    ];
+    protected $guarded = [
+        'id',
+    ];
+
+    //1対谷多リレーション追加
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }

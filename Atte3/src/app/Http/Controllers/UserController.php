@@ -9,6 +9,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
+
+        // ビューにデータを渡す
         return view('date', ['users' => $users]);
     }
 }

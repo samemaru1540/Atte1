@@ -15,12 +15,6 @@
       <th>休憩時間</th>
       <th>勤務時間</th>
     </tr>
-    @foreach ($times as $times)
-    <tr>
-    <td>{{$time->attend}}</td>
-    <td>{{$time->leave}}</td>
-    </tr>
-    @endforeach
   </table>
 </form>
 @endsection
