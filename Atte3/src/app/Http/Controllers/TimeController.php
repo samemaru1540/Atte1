@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Time;
 use App\Models\User;
+use App\Models\Rest;
 use Carbon\Carbon;
 use App\Http\Requests\TimeRequest;
 use Illuminate\Http\Request;
@@ -12,7 +13,7 @@ class TimeController extends Controller
 {
     public function attend()
     {
-        $user= Auth::user();
+        $user = Auth::user();
 
         $timestamp = Time::create([
             'user_id' => $user->id,

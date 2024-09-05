@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TimeController;
+use App\Http\Controllers\RestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [AuthController::class, 'index']);
     Route::post('/', [TimeController::class, 'attend']);
     Route::post('/', [TimeController::class, 'leave']);
+    Route::post('/',[RestController::class, 'break']);
+    Route::post('/',[RestController::class, 'breakEnd']);
     Route::get('/date', [UserController::class, 'index'])->middleware('auth');
 });

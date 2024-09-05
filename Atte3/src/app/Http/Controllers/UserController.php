@@ -6,11 +6,8 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function show()
     {
-        $users = User::all();
-
-        // ビューにデータを渡す
-        return view('date', ['users' => $users]);
+        return view('date', ['users' -> $user]);
     }
 }
